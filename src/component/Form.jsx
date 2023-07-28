@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../public/logo-mndpt.jpg';
+import logo from '../logo-mndpt.jpeg';
 
 const Form = () => {
     return (
