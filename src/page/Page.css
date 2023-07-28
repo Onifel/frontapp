@@ -1,0 +1,36 @@
+.general{
+    font-size: 12px;
+}
+.profil{
+    color: #1cb799;
+}
+.lien{
+    display: inline-block;
+    font-size: 18px;
+    color: gray;
+    text-decoration: none;
+}
+.lien:hover{
+    background-color: #1cb799;
+    color: white;
+    border-radius: 20px;
+}
+.deconnex{
+    color: black;
+}
+i.logout{
+    color: #1cb799;
+}
+#demij,.demij,.mataprem{
+    display: inline;
+}
+#demijrn{
+    color: black;
+}
+.vaovao{
+    border-left: 1px solid rgb(117, 116, 116);
+    box-shadow: 50%;
+}
+.general label{
+    color: #ef3e36;
+}

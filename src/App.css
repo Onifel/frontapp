@@ -1,0 +1,90 @@
+.fond {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-image: url(../public/1.jpg);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.milieu {
+  width: 700px;
+  height: 500px;
+  background-image: url(../public/fondGB.png);
+  background-size: cover;
+  border-radius: 20px;
+  background-position: center;
+  font-size: 12px;
+}
+
+.techno {
+  width: 50%;
+}
+
+.connex {
+  width: 50%;
+}
+
+.logo {
+  width: 200px;
+  height: 125px;
+}
+
+h4 {
+  font-weight: bold;
+  color: gray;
+}
+
+.log,
+.pwd {
+  width: 450px;
+}
+
+i.fa,
+#matricule {
+  color: gray;
+}
+
+.buttons {
+  width: 150px;
+  border-radius: 20px;
+  background-color: #1cb799;
+  color: white;
+  font-size: 20px;
+}
+
+.chb,
+.changer {
+  font-size: 9px;
+}
+
+.checkb {
+  font-size: 12px;
+}
+
+.changer,
+.retour,
+.connecter {
+  color: lightgrey;
+}
+
+h1 {
+  color: whitesmoke;
+}
+
+.mndpt {
+  color: whitesmoke;
+  font-size: 15px;
+}
+
+span {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.button {
+  width: 85px;
+  border-radius: 20px;
+  background-color: #1cb799;
+  color: white;
+  font-size: 20px;
+}
