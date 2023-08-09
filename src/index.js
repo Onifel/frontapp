@@ -7,38 +7,38 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Change from './component/Change';
-import Home from './component/Home';
+import Form from './component/Form';
 import AgentPage from './page/AgentPage';
 import Demande from './component/Demande';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
   },
   {
     path: "change",
-    element: <Change/>,
+    element: <Change />,
   },
   {
-    path: "home",
-    element: <Home/>,
+    path: "form",
+    element: <Form />,
   },
   {
     path: "agent",
-    element: <AgentPage/>,
+    element: <AgentPage />,
   },
   {
     path: "demande",
-    element: <Demande/>,
+    element: <Demande />,
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  
-    <RouterProvider router={router} />
-  
+
+  <RouterProvider router={router} />
+
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,11 +1,11 @@
 import './App.css';
-import Home from './component/Home';
+import Form from './component/Form';
 
-function App(){
+function App() {
   return (
-      <>
-        <Home/>
-      </>
+    <>
+      <div>Test</div>
+    </>
   );
 }
 
