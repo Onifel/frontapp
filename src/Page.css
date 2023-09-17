@@ -1,0 +1,52 @@
+#select-image {
+    width: 150px;
+    height: 150px;
+    margin-left: 100px;
+    margin-right: 25px;
+}
+
+.deconnecter {
+    color: lightgrey;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.userNom,
+.deconnecter {
+    line-height: 150px;
+}
+
+.profil,
+.demande,
+.demandeabs,
+.planning {
+    width: 400px;
+}
+
+.vaovao {
+    width: 400px;
+    height: 48px;
+}
+
+.filazana {
+    width: 350px;
+}
+
+#jft {
+    background-color: ghostwhite;
+    border: none;
+}
+
+.info {
+    display: flex;
+}
+
+.inputlb {
+    margin-bottom: 35px;
+}
+
+.inputlb1 {
+    margin-top: 20px;
+    margin-bottom: 35px;
+}

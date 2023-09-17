@@ -24,11 +24,12 @@
 .logo {
   width: 200px;
   height: 125px;
+  margin-top: -50px;
 }
 
-h4 {
+.welcome {
+  margin-bottom: 20px;
   font-weight: bold;
-  color: gray;
 }
 
 i.fa,
@@ -41,23 +42,21 @@ i.fa,
   text-decoration: none;
 }
 
-.chb,
-.changer {
+.chb {
   font-size: 9px;
-}
-
-.checkb {
-  font-size: 12px;
 }
 
 .changer,
 .retour,
 .connecter {
   color: lightgrey;
+  font-size: 12px;
 }
 
-h1 {
-  color: whitesmoke;
+.connecter,
+.retour {
+  float: right;
+  margin-top: 15px;
 }
 
 .mndpt {
@@ -65,15 +64,11 @@ h1 {
   font-size: 15px;
 }
 
-span {
-  font-size: 17px;
+.chgMdp {
+  font-size: 20px;
   font-weight: bold;
 }
 
 .button {
   color: white;
-}
-
-.textfield {
-  border-bottom: 1px solid lightgrey !important;
 }

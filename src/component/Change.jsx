@@ -2,6 +2,8 @@ import '../App.css';
 import { NavLink } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import Leftside from './Leftside';
+import { Box, Grid, Stack, InputLabel, TextField, Select, FormControl, MenuItem, SelectChangeEvent, Button } from '@mui/material';
+import { useState } from 'react';
 
 function Change() {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -9,43 +11,138 @@ function Change() {
         console.log(data);
     }
 
-    return (
-        <div className='fond'>
-            <div className="milieu">
-                <Leftside />
-                <div className='connex'>
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <h4>Changer mot de passe</h4>
-                        <NavLink to='/form' className='retour'>Retour</NavLink>
-                        <div className="form-group log">
-                            <span id="cin"><i className="fa fa-id-card"></i></span>
-                            <input id="cin" type="text" placeholder="CIN" {...register('cin', { required: true, minlength: 12 })} />
-                            {errors.name && <p>CIN est obligatoire</p>}
-                        </div>
-                        <div className="form-group log">
-                            <span id="phone"><i className="fa fa-phone"></i></span>
-                            <input id="phone" type="text" placeholder="Téléphone" {...register('phone')} />
-                        </div>
-                        <select className="statut">
-                            <option value="selected">Statut</option>
-                            <option value="adminrh">ADMIN-RH</option>
-                            <option value="adminsi">ADMIN-SI</option>
-                            <option value="sg">SG</option>
-                            <option value="dir">DIR</option>
-                            <option value="shd">SHD</option>
-                            <option value="agent">AGENT</option>
-                        </select>
-                        <div className="form-group log">
-                            <span id="matricule">123</span>
-                            <input id="matricule" type="text" placeholder="Matricule" {...register('matricule')} />
-                        </div>
-                        <button type='submit'>Envoyer</button>
-                        <NavLink to='/agent' className='connecter'>Se connecter</NavLink>
+    const [statut, setStatut] = useState('');
 
+    const handleChange = (e: SelectChangeEvent) => {
+        setStatut(e.target.value);
+    };
+
+
+    return (
+        <Grid
+            className='fond'
+            container
+            spacing={0}
+            direction='row'
+            alignItems='center'
+            justifyContent='center'
+            sx={{ minHeight: '100vh' }}
+        >
+            <Box
+                className="milieu"
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                maxWidth={700}
+                maxHeight={500}
+            >
+                <Leftside />
+                <Box
+                    className='connex'
+                    maxWidth={350}
+                    maxHeight={500}
+                    bgcolor='white'
+                    display='flex'
+                    flexDirection='column'
+                    justifyContent='center'
+                    alignItems="center"
+                >
+                    <h4 className='chgMdp'>Changer mot de passe</h4>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <Stack
+                            spacing={2}
+                            maxWidth={275}
+                        >
+                            <Box>
+                                <NavLink to='/form' className='retour'>Retour</NavLink>
+                            </Box>
+                            <TextField
+                                autoComplete='none'
+                                size='small'
+                                label="CIN"
+                                type="number"
+                                id="cin"
+                                variant='standard'
+                                {...register("cin", { required: "CIN est obligatoire", })}
+                                error={!!errors.cin}
+                                helpText={errors.cin?.message}
+                            />
+                            <TextField
+                                autoComplete='none'
+                                size='small'
+                                label="Téléphone"
+                                type="number"
+                                id="phone"
+                                variant='standard'
+                                {...register("phone", { required: "Le numéro téléphone est obligatoire", })}
+                                error={!!errors.phone}
+                                helpText={errors.phone?.message}
+                            />
+                            <FormControl
+                                variant='standard'
+                                sx={{ m: 1, minWidth: 120 }}
+                            >
+                                <InputLabel id="input-sta">Statut</InputLabel>
+                                <Select
+                                    className="statut"
+                                    autoComplete='none'
+                                    size='small'
+                                    label="Statut"
+                                    value={statut}
+                                    onChange={handleChange}
+                                    {...register("statut", { required: "Le staut est obligatoire", })}
+                                    error={!!errors.statut}
+                                    helpText={errors.statut?.message}
+                                >
+                                    <MenuItem value="selected">Statut</MenuItem>
+                                    <MenuItem value="adminrh">ADMIN-RH</MenuItem>
+                                    <MenuItem value="adminsi">ADMIN-SI</MenuItem>
+                                    <MenuItem value="sg">SG</MenuItem>
+                                    <MenuItem value="dir">DIR</MenuItem>
+                                    <MenuItem value="shd">SHD</MenuItem>
+                                    <MenuItem value="agent">AGENT</MenuItem>
+                                </Select>
+                            </FormControl>
+                            <TextField
+                                autoComplete='none'
+                                size='small'
+                                label="Matricule"
+                                type="number"
+                                id="matricule"
+                                variant='standard'
+                                {...register("matricule", { required: "Le numéro matricule est obligatoire", })}
+                                error={!!errors.matricule}
+                                helpText={errors.matricule?.message}
+                            />
+                            <Box>
+                                <Button
+                                    variant='contained'
+                                    type='submit'
+                                    maxWidth={75}
+                                    sx={{
+                                        backgroundColor: '#1cb799',
+                                        color: 'white',
+                                        borderRadius: '20px',
+                                        mt: '25px'
+                                    }}
+                                >
+                                    ENVOYER
+                                </Button>
+                            </Box>
+                            <Box>
+                                <NavLink
+                                    to='/form'
+                                    className='connecter'
+                                >
+                                    Se connecter
+                                </NavLink>
+                            </Box>
+
+                        </Stack>
                     </form>
-                </div>
-            </div>
-        </div>
+                </Box>
+            </Box>
+        </Grid>
     );
 }
 

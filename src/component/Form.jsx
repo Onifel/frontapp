@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../image/logo-mndpt.jpeg';
 import Leftside from './Leftside';
 import { useForm } from "react-hook-form";
-import { TextField, Stack, Button, Grid, Box, InputBase } from "@mui/material";
+import { TextField, Stack, Button, Grid, Box, FormControlLabel, Checkbox } from "@mui/material";
 
 const Form = () => {
 
@@ -36,14 +36,14 @@ const Form = () => {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
-                width={700}
-                height={500}
+                maxWidth={700}
+                maxHeight={500}
             >
                 <Leftside />
                 <Box
                     className='connex'
-                    width={350}
-                    height={500}
+                    maxwidth={350}
+                    maxheight={500}
                     bgcolor='white'
                     display='flex'
                     flexDirection='column'
@@ -54,58 +54,65 @@ const Form = () => {
                     <h4 className="welcome">Bienvenu</h4>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Stack
-                            spacing={2}
-                            width={275}
+                            spacing={3}
+                            maxWidth={275}
                         >
+                            <TextField
+                                autoComplete='none'
+                                size='small'
+                                label="Login"
+                                type="text"
+                                id="lgn"
+                                variant='standard'
+                                {...register("login", { required: "Le login est obligatoire", })}
+                                error={!!errors.login}
+                                helpText={errors.login?.message}
+                            />
+                            <TextField
+                                autoComplete='none'
+                                size='small'
+                                label="Mot de passe"
+                                type="password"
+                                id="pwd"
+                                variant='standard'
+                                {...register("password", { required: "Le mot de passe est obligatoire", })}
+                                error={!!errors.password}
+                                helperText={errors.password?.message}
+                            />
                             <Box>
-                                <span id="user"><i className="fa fa-user"></i></span>
-                                <TextField
-                                    autoComplete='none'
-                                    size='small'
-                                    label="Login"
-                                    type="text"
-                                    id="lgn"
-                                    variant='standard'
-                                    {...register("login", { required: "Le login est obligatoire", })}
-                                    error={!!errors.login}
-                                    helpText={errors.login?.message}
-                                />
+                                <Button
+                                    variant='contained'
+                                    type='submit'
+                                    maxWidth={75}
+                                    sx={{
+                                        backgroundColor: '#1cb799',
+                                        color: 'white',
+                                        borderRadius: '20px',
+                                        float: 'right',
+                                        mt: '15px'
+                                    }}
+                                >
+                                    Se connecter
+                                </Button>
                             </Box>
-                            <Box>
-                                <span id="lock"><i className="fa fa-lock"></i></span>
-                                <TextField
-                                    autoComplete='none'
-                                    size='small'
-                                    label="Password"
-                                    type="password"
-                                    id="pwd"
-                                    variant='standard'
-                                    {...register("password", { required: "Le mot de passe est obligatoire", })}
-                                    error={!!errors.password}
-                                    helperText={errors.password?.message}
-                                />
-                            </Box>
-
-                            <Button
-                                variant='contained'
-                                type='submit'
+                            <Box
+                                display='flex'
+                                justifyContent='space-between'
                             >
-                                Se connecter
-                            </Button>
-
-                            <Box>
-                                <InputBase
-                                    autoComplete='none'
-                                    type="checkbox"
-                                    {...register("checkbox")} /> {" "}
-                                <label className='chb' for='check'>Restez connecter</label>
+                                <FormControlLabel
+                                    value='end'
+                                    control={<Checkbox />}
+                                    label='Restez connecter'
+                                    labelPlacement='end'
+                                    className='chb'
+                                />
                                 <NavLink to='/change' className='changer'>Mot de passe oublié?</NavLink>
                             </Box>
                         </Stack>
                     </form>
                 </Box >
             </Box>
-        </Grid>
+        </Grid >
     );
 }
 
