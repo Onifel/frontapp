@@ -26,6 +26,10 @@
 
 .vaovao {
     width: 400px;
+    padding-top: 15px;
+}
+
+.vaovaoH {
     height: 48px;
 }
 
@@ -33,10 +37,15 @@
     width: 350px;
 }
 
-.mat
-#jft {
+.textf{
     background-color: rgb(242, 242, 248);
     border: none;
+    width: 300px; 
+}
+#select {
+    background-color: rgb(242, 242, 248);
+    border: none;
+    width: 167px; 
 }
 
 .info {

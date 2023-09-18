@@ -17,12 +17,12 @@ const HeaderPage = () => {
                         <Avatar type="file" accept="image/" id="select-image" src="/broken-image.jpg" />
                     }
                     action={
-                        <NavLink className='deconnecter'>
+                        <NavLink to='/form' className='deconnecter'>
                             Se Déconnecter
                         </NavLink>
                     }
-                    title="Name"
-                    subheader="Firstname"
+                    title="NOM"
+                    subheader="PRENOM"
                 />
             </Card>
         </Grid>

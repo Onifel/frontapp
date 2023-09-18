@@ -120,12 +120,13 @@ const Employee = () => {
                     </Card>
                 </Box>
                 <Card
+                    className='vaovao'
                     sx={{
                         textAlign: 'center'
                     }}
                 >
                     <CardHeader
-                        className='vaovao'
+                        className='vaovaoH'
                         sx={{
                             backgroundColor: '#b8f5ed',
                             color: 'white',
@@ -147,8 +148,8 @@ const Employee = () => {
                     </CardContent>
                     <CardMedia
                         component="img"
-                        maxHeight="194"
-                        maxWidth='250'
+                        width='350'
+                        height='280'
                         image={image}
                         alt="#"
                     />

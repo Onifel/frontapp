@@ -43,12 +43,8 @@ const DemandeAbs = () => {
                             autoComplete='none'
                             size='small'
                             type="text"
-                            className="mat"
-                            variant='standard'
-                            sx={{
-                                
-                                maxWidth: '300px'
-                            }}
+                            variant="standard"
+                            className="textf"
                             {...register("matric", { required: "Le matricule est obligatoire", })}
                             error={!!errors.matric}
                             helpText={errors.matric?.message}
@@ -60,12 +56,8 @@ const DemandeAbs = () => {
                             autoComplete='none'
                             size='small'
                             type="text"
-                            id="nm"
-                            variant='standard'
-                            sx={{
-                                backgroundColor: 'ghostwhite',
-                                maxWidth: '300px'
-                            }}
+                            variant="standard"
+                            className="textf"
                             {...register("nm", { required: "Le nom est obligatoire", })}
                             error={!!errors.nm}
                             helpText={errors.nm?.message}
@@ -77,11 +69,7 @@ const DemandeAbs = () => {
                             autoComplete='none'
                             size='small'
                             type="text"
-                            id="pnm"
-                            sx={{
-                                backgroundColor: 'ghostwhite',
-                                maxWidth: '300px'
-                            }}
+                            className="textf"
                             variant='standard'
                             {...register("pnm", { required: "Le prénom est obligatoire", })}
                             error={!!errors.pnm}
@@ -99,12 +87,8 @@ const DemandeAbs = () => {
                             autoComplete='none'
                             size='small'
                             type="text"
-                            id="mat"
+                            className="textf"
                             variant='standard'
-                            sx={{
-                                backgroundColor: 'ghostwhite',
-                                maxWidth: '300px'
-                            }}
                             {...register("grade", { required: "La grade est obligatoire", })}
                             error={!!errors.grade}
                             helpText={errors.grade?.message}
@@ -116,12 +100,8 @@ const DemandeAbs = () => {
                             autoComplete='none'
                             size='small'
                             type="text"
-                            id="nm"
+                            className="textf"
                             variant='standard'
-                            sx={{
-                                backgroundColor: 'ghostwhite',
-                                maxWidth: '300px'
-                            }}
                             {...register("emploi", { required: "L'emploi est obligatoire", })}
                             error={!!errors.emploi}
                             helpText={errors.emploi?.message}
@@ -133,11 +113,7 @@ const DemandeAbs = () => {
                             autoComplete='none'
                             size='small'
                             type="text"
-                            id="pnm"
-                            sx={{
-                                backgroundColor: 'ghostwhite',
-                                maxWidth: '300px'
-                            }}
+                            className="textf"
                             variant='standard'
                             {...register("indice", { required: "L'indice' est obligatoire", })}
                             error={!!errors.indice}
@@ -155,12 +131,8 @@ const DemandeAbs = () => {
                             autoComplete='none'
                             size='small'
                             type="text"
-                            id="ddd"
+                            className="textf"
                             variant='standard'
-                            sx={{
-                                backgroundColor: 'ghostwhite',
-                                maxWidth: '300px'
-                            }}
                             {...register("ddd", { required: "La date de début est obligatoire", })}
                             error={!!errors.ddd}
                             helpText={errors.ddd?.message}
@@ -172,12 +144,8 @@ const DemandeAbs = () => {
                             autoComplete='none'
                             size='small'
                             type="text"
-                            id="ddf"
+                            className="textf"
                             variant='standard'
-                            sx={{
-                                backgroundColor: 'ghostwhite',
-                                maxWidth: '300px'
-                            }}
                             {...register("ddf", { required: "La date de fin est obligatoire", })}
                             error={!!errors.ddf}
                             helpText={errors.ddf?.message}
@@ -199,11 +167,8 @@ const DemandeAbs = () => {
                                 className="statut"
                                 autoComplete='none'
                                 size='small'
+                                id="select"
                                 variant='standard'
-                                sx={{
-                                    backgroundColor: 'ghostwhite',
-                                    maxWidth: '190px'
-                                }}
                                 value={statut}
                                 onChange={handleChange}
                             >
@@ -223,12 +188,8 @@ const DemandeAbs = () => {
                             autoComplete='none'
                             size='small'
                             type="text"
-                            id="tpabs"
+                            className="textf"
                             variant='standard'
-                            sx={{
-                                backgroundColor: 'ghostwhite',
-                                maxWidth: '300px'
-                            }}
                             {...register("tpabs", { required: "Le type d'absence est obligatoire", })}
                             error={!!errors.tpabs}
                             helpText={errors.tpabs?.message}
@@ -240,7 +201,7 @@ const DemandeAbs = () => {
                             autoComplete='none'
                             size='small'
                             type="text"
-                            id="jft"
+                            className="textf"
                             value={state}
                             onChange={handleChange}
                             rows={5}
@@ -256,12 +217,8 @@ const DemandeAbs = () => {
                             autoComplete='none'
                             size='small'
                             type="text"
-                            id="ldj"
+                            className='textf'
                             variant='standard'
-                            sx={{
-                                backgroundColor: 'ghostwhite',
-                                maxWidth: '300px'
-                            }}
                             {...register("ldj", { required: "Le lieu de jouisssance est obligatoire", })}
                             error={!!errors.ldj}
                             helpText={errors.ldj?.message}
