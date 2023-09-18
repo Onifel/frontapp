@@ -43,15 +43,15 @@ const DemandeAbs = () => {
                             autoComplete='none'
                             size='small'
                             type="text"
-                            id="mat"
+                            className="mat"
                             variant='standard'
                             sx={{
-                                backgroundColor: 'ghostwhite',
+                                
                                 maxWidth: '300px'
                             }}
-                            {...register("login", { required: "Le matricule est obligatoire", })}
-                            error={!!errors.login}
-                            helpText={errors.login?.message}
+                            {...register("matric", { required: "Le matricule est obligatoire", })}
+                            error={!!errors.matric}
+                            helpText={errors.matric?.message}
                         />
                     </Box>
                     <Box sx={{ marginRight: '150px' }}>
@@ -86,6 +86,62 @@ const DemandeAbs = () => {
                             {...register("pnm", { required: "Le prénom est obligatoire", })}
                             error={!!errors.pnm}
                             helpText={errors.pnm?.message}
+                        />
+                    </Box>
+                </Box>
+                <Box
+                    display='flex'
+                    sx={{ my: '50px' }}
+                >
+                    <Box sx={{ marginRight: '150px' }}>
+                        <InputLabel>Grade</InputLabel>
+                        <TextField
+                            autoComplete='none'
+                            size='small'
+                            type="text"
+                            id="mat"
+                            variant='standard'
+                            sx={{
+                                backgroundColor: 'ghostwhite',
+                                maxWidth: '300px'
+                            }}
+                            {...register("grade", { required: "La grade est obligatoire", })}
+                            error={!!errors.grade}
+                            helpText={errors.grade?.message}
+                        />
+                    </Box>
+                    <Box sx={{ marginRight: '150px' }}>
+                        <InputLabel>Emploi</InputLabel>
+                        <TextField
+                            autoComplete='none'
+                            size='small'
+                            type="text"
+                            id="nm"
+                            variant='standard'
+                            sx={{
+                                backgroundColor: 'ghostwhite',
+                                maxWidth: '300px'
+                            }}
+                            {...register("emploi", { required: "L'emploi est obligatoire", })}
+                            error={!!errors.emploi}
+                            helpText={errors.emploi?.message}
+                        />
+                    </Box>
+                    <Box>
+                        <InputLabel>Indice</InputLabel>
+                        <TextField
+                            autoComplete='none'
+                            size='small'
+                            type="text"
+                            id="pnm"
+                            sx={{
+                                backgroundColor: 'ghostwhite',
+                                maxWidth: '300px'
+                            }}
+                            variant='standard'
+                            {...register("indice", { required: "L'indice' est obligatoire", })}
+                            error={!!errors.indice}
+                            helpText={errors.indice?.message}
                         />
                     </Box>
                 </Box>

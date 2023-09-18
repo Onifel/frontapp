@@ -51,7 +51,7 @@ const Form = () => {
                     alignItems="center"
                 >
                     <img src={logo} className='logo' alt='logo' />
-                    <h4 className="welcome">Bienvenu</h4>
+                    <h4 className="welcome">Bienvenue</h4>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Stack
                             spacing={3}
