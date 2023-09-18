@@ -5,9 +5,10 @@ import { Box } from "@mui/material";
 const Leftside = () => {
     return (
         <Box
-            maxWidth={350}
-            maxHeight={500}
-            id='techno'>
+            width={350}
+            height={500}
+            className="techno"
+        >
         </Box>
     );
 }

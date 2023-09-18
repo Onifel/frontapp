@@ -39,8 +39,8 @@ function Change() {
                 <Leftside />
                 <Box
                     className='connex'
-                    maxWidth={350}
-                    maxHeight={500}
+                    width={350}
+                    height={500}
                     bgcolor='white'
                     display='flex'
                     flexDirection='column'

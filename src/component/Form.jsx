@@ -36,14 +36,14 @@ const Form = () => {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
-                maxWidth={700}
-                maxHeight={500}
+                maxWidth={710}
+                maxHeight={505}
             >
                 <Leftside />
                 <Box
                     className='connex'
-                    maxwidth={350}
-                    maxheight={500}
+                    width={350}
+                    height={500}
                     bgcolor='white'
                     display='flex'
                     flexDirection='column'
