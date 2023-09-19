@@ -8,7 +8,7 @@ import '../node_modules/font-awesome/css/font-awesome.min.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Change from './component/Change';
 import Form from './component/Form';
-import EmployeePage from './page/EmployeePage';
+import AgentPage from './page/AgentPage';
 import ShdPage from './page/ShdPage';
 
 const router = createBrowserRouter([
@@ -25,8 +25,8 @@ const router = createBrowserRouter([
     element: <Form />,
   },
   {
-    path: "employee",
-    element: <EmployeePage />,
+    path: "agent",
+    element: <AgentPage />,
   },
   {
     path: "shd",
