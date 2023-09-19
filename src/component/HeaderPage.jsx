@@ -21,8 +21,8 @@ const HeaderPage = () => {
                             Se Déconnecter
                         </NavLink>
                     }
-                    title="NOM"
-                    subheader="PRENOM"
+                    title="RAHOLIARIFETRA"
+                    subheader="FALIHARISOA"
                 />
             </Card>
         </Grid>

@@ -20,7 +20,7 @@
 .profil,
 .demande,
 .demandeabs,
-.planning {
+.planning,.validation {
     width: 400px;
 }
 
@@ -40,7 +40,7 @@
 .textf{
     background-color: rgb(242, 242, 248);
     border: none;
-    width: 300px; 
+    width: 300px;
 }
 #select {
     background-color: rgb(242, 242, 248);
@@ -59,4 +59,10 @@
 .inputlb1 {
     margin-top: 20px;
     margin-bottom: 35px;
+}
+
+.rejeter{
+    background-color: red;
+    color: white;
+
 }

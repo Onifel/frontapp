@@ -1,12 +1,12 @@
 import React from 'react';
 import HeaderPage from '../component/HeaderPage';
-import Agent from '../component/Agent';
+import Shd from '../component/Shd';
 
 function ShdPage() {
     return (
         <>
             <HeaderPage />
-            <Agent />
+            <Shd />
         </>
     );
 }

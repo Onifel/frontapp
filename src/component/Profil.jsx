@@ -113,7 +113,7 @@ const Profil = () => {
 
             </form>
         </Grid>
-    )
+    );
 }
 
 export default Profil;
