@@ -41,7 +41,6 @@ const DemandeAbs = () => {
                         <InputLabel>Matricule</InputLabel>
                         <TextField
                             autoComplete='none'
-                            placeholder='462 158'
                             size='small'
                             type="text"
                             variant="standard"
@@ -55,7 +54,6 @@ const DemandeAbs = () => {
                         <InputLabel>Nom</InputLabel>
                         <TextField
                             autoComplete='none'
-                            placeholder='RAHOLIARIFETRA'
                             size='small'
                             type="text"
                             variant="standard"
@@ -69,7 +67,6 @@ const DemandeAbs = () => {
                         <InputLabel>Prénom</InputLabel>
                         <TextField
                             autoComplete='none'
-                            placeholder='FALIHARISOA'
                             size='small'
                             type="text"
                             className="textf"
@@ -88,7 +85,6 @@ const DemandeAbs = () => {
                         <InputLabel>Grade</InputLabel>
                         <TextField
                             autoComplete='none'
-                            placeholder='AGENT'
                             size='small'
                             type="text"
                             className="textf"
@@ -102,7 +98,6 @@ const DemandeAbs = () => {
                         <InputLabel>Emploi</InputLabel>
                         <TextField
                             autoComplete='none'
-                            placeholder='Femme de menage'
                             size='small'
                             type="text"
                             className="textf"
